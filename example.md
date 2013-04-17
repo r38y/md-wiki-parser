@@ -31,7 +31,8 @@ Sed nec ipsum ac libero pretium laoreet. Sed nec metus at nisi dignissim congue.
 
 # Mauris lacus justo, pellentesque sed
 
-> Pellentesque tempor laoreet mauris, vel lobortis quam semper sit amet. Sed nec ipsum ac libero pretium laoreet. Sed nec metus at nisi dignissim congue.
+> Pellentesque tempor laoreet mauris, vel lobortis quam semper sit amet.
+> Sed nec ipsum ac libero pretium laoreet. Sed nec metus at nisi dignissim congue.
 >
 > -- <cite>Randy J. Schmidt</cite>
 
