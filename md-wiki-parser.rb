@@ -2,24 +2,30 @@
 
 require 'redcarpet'
 
-def md(text)
-  toc_renderer = Redcarpet::Render::HTML_TOC.new
+def md_toc(text)
+  renderer = Redcarpet::Render::HTML_TOC.new
+  markdown = Redcarpet::Markdown.new(renderer,
+    space_after_headers: true,
+  )
+  markdown.render(text)
+end
 
-  html_renderer = Redcarpet::Render::HTML.new(
+def md_html(text)
+  renderer = Redcarpet::Render::HTML.new(
     hard_wrap: true,
     with_toc_data: true,
   )
-  toc_markdown = Redcarpet::Markdown.new(toc_renderer,
+  markdown = Redcarpet::Markdown.new(renderer,
     autolink: true,
     space_after_headers: true,
   )
-  html_markdown = Redcarpet::Markdown.new(html_renderer,
-    autolink: true,
-    space_after_headers: true,
-  )
+  markdown.render(text)
+end
+
+def md(text)
   output = []
-  output << toc_markdown.render(text)
-  output << html_markdown.render(text)
+  output << md_toc(text)
+  output << md_html(text)
   output.join('')
 end
 
